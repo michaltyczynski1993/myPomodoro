@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 1rem 1rem;
+    border: none;
+    background-color: rgb(161, 161, 246);
+    margin: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+    box-shadow: 0.1rem 0.1rem 0.4rem rgb(216, 215, 215);
+}
+
+button:hover {
+    background-color: rgb(140, 140, 210);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+}
+
+.container>h2 {
+    margin-bottom: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}

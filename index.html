@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Pomodoro</title>
+</head>
+
+<body>
+    <main>
+        <h1>POMODORO APP</h1>
+        <div class="container">
+            <button onclick="setPomodoro()">Pomodoro</button>
+            <button onclick="setBreak()">Short Break</button>
+            <button onclick="setLongBreak()">Long Break</button>
+        </div>
+        <div class="container">
+            <!-- min:sec -->
+            <h2 id="timerDisplay">00:00</h2>
+            <div class="row">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="stoptimer()">Stop</button>
+            </div>
+        </div>
+        <!-- JS here -->
+        <script src="timer.js"></script>
+    </main>
+</body>
+
+</html>
