@@ -2,6 +2,7 @@
 var minutes = 0;
 var seconds = 0;
 var isPaused = true;
+var isNotified = false;
 
 var timer = setInterval(function () {
     if (!isPaused) {
@@ -12,8 +13,10 @@ var timer = setInterval(function () {
     }
 }, 1000)
 
+
 function startTimer() {
     isPaused = false;
+    isNotified = false;
 }
 
 function stoptimer() {
@@ -27,8 +30,8 @@ function setPomodoro() {
 }
 
 function setBreak() {
-    minutes = 5;
-    seconds = 0;
+    minutes = 0;
+    seconds = 5;
     showTimer();
 }
 
@@ -51,6 +54,10 @@ function showTimer() {
 function countDown() {
     showTimer(minutes, seconds);
     if (minutes == 0 && seconds == 0) {
+        if (!isNotified) {
+            notification();
+            isNotified = true;
+        }
         clearInterval();
     }
     else {
@@ -62,6 +69,12 @@ function countDown() {
             seconds--;
         }
     }
+}
+
+function notification() {
+    let audio = new Audio("notification.mp3");
+    audio.play();
+    alert("Time left!");
 }
 
 // window.onload = function () {

@@ -12,7 +12,7 @@
 <body>
     <main>
         <h1>POMODORO APP</h1>
-        <div class="container">
+        <div class="container bttn-container">
             <button onclick="setPomodoro()">Pomodoro</button>
             <button onclick="setBreak()">Short Break</button>
             <button onclick="setLongBreak()">Long Break</button>
@@ -21,8 +21,8 @@
             <!-- min:sec -->
             <h2 id="timerDisplay">00:00</h2>
             <div class="row">
-                <button onclick="startTimer()">Start</button>
-                <button onclick="stoptimer()">Stop</button>
+                <button class="action-bttn" onclick="startTimer()">Start</button>
+                <button class="action-bttn" onclick="stoptimer()">Stop</button>
             </div>
         </div>
         <!-- JS here -->
