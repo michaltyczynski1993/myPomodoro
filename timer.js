@@ -30,8 +30,8 @@ function setPomodoro() {
 }
 
 function setBreak() {
-    minutes = 0;
-    seconds = 5;
+    minutes = 5;
+    seconds = 0;
     showTimer();
 }
 
@@ -43,11 +43,14 @@ function setLongBreak() {
 
 function showTimer() {
     const timer = document.getElementById("timerDisplay");
+    const titleTimer = document.getElementById("titleTimerDisplay");
     if (seconds < 10) {
         timer.innerHTML = `${minutes}:0${seconds}`;
+        titleTimer.innerHTML = `${minutes}:0${seconds}`;
     }
     else {
         timer.innerHTML = `${minutes}:${seconds}`;
+        titleTimer.innerHTML = `${minutes}:${seconds}`;
     }
 }
 
@@ -74,7 +77,8 @@ function countDown() {
 function notification() {
     let audio = new Audio("notification.mp3");
     audio.play();
-    alert("Time left!");
+    setTimeout(
+        () => alert("Time left!"), 1000);
 }
 
 // window.onload = function () {
